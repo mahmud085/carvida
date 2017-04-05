@@ -1,6 +1,6 @@
 <h1>Todo list</h1>
 <hr>
-<form name="todoForm" novalidate ng-submit="addTodo()">
+<!-- <form name="todoForm" novalidate ng-submit="addTodo()">
   <div class="form-group"
       ng-class="{'has-error': todoForm.content.$invalid
         && todoForm.content.$dirty}">
@@ -13,7 +13,16 @@
     </span>
   </div>
   <button class="btn btn-default" ng-disabled="todoForm.$invalid">Add</button>
-</form>
+</form> -->
+<form name='uploadForm' 
+  action='http://localhost:3000/api/cars/23134/image' 
+  method='post' 
+  encType="multipart/form-data">
+    <input type="file" name="image" />
+    <input type='submit' value='Upload!' />
+</form> 
+<hr>
+<img src="23134.PNG" >
 <hr>
 <div class="list-group">
   <a class="list-group-item" ng-repeat="todo in todos">{{todo.content}}&nbsp;

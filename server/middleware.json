@@ -24,9 +24,12 @@
     }
   },
   "files": {
-    "loopback#static": {
-      "params": "$!../client"
-    }
+    "loopback#static": [{
+        "params": "$!../client"
+    },
+    {
+        "params": "$!../server/pictures"
+    }]
   },
   "final": {
     "loopback#urlNotFound": {}
